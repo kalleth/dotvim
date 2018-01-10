@@ -1,4 +1,5 @@
 set termguicolors
+set nocompatible
 " source $VIMRUNTIME\mswin.vim
 
 call plug#begin('~\AppData\Local\nvim\plugged')
@@ -6,6 +7,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-endwise'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nightsense/vimspectr'
+Plug 'junegunn/goyo.vim'
 call plug#end()
 
 colorscheme vimspectr210wcurve-dark
@@ -36,8 +38,18 @@ au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 au InsertLeave * match ExtraWhiteSpace /\s\+$/
 au FileType go setl noexpandtab shiftwidth=4 softtabstop=4
 
+" goyo for markdown/distraction-free writing
+map <F12> :Goyo<CR>
+let g:goyo_width=120
+
 syntax on
 filetype on
 filetype plugin on
-
 filetype indent on
+
+"vim-pencil
+"augroup pencil
+"  autocmd!
+"  autocmd FileType markdown,mkd call pencil#init()
+"  autocmd FileType text         call pencil#init()
+"augroup END
