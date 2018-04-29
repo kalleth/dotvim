@@ -10,7 +10,7 @@ Plug 'nightsense/vimspectr'
 Plug 'junegunn/goyo.vim'
 call plug#end()
 
-colorscheme vimspectr210wcurve-dark
+colorscheme vimspectr210-dark
 set mouse=a
 set background=dark
 set wildmode=list:longest,full "pretty finding
