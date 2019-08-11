@@ -8,9 +8,13 @@ Plug 'tpope/vim-endwise'
 Plug 'vim-ruby/vim-ruby'
 Plug 'nightsense/vimspectr'
 Plug 'junegunn/goyo.vim'
+Plug 'scrooloose/nerdtree'
+Plug 'rakr/vim-one'
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 call plug#end()
 
-colorscheme vimspectr210-dark
+colorscheme one
 set mouse=a
 set background=dark
 set wildmode=list:longest,full "pretty finding
@@ -26,10 +30,12 @@ set backspace=indent,eol,start
 set completeopt-=preview
 set cursorline
 set fileformats=unix
+" GuiFont Consolas:h12
 map <F8> :set invhlsearch hlsearch?<CR>
 " minibufexpl buffer fuzzy find
 nmap ; :CtrlPBuffer<CR>
 " unobtrusive whitespace highlighting
+map <C-n> :NERDTreeToggle<CR>
 " http://blog.kamil.dworakowski.name/2009/09/unobtrusive-highlighting-of-trailing.html
 highlight ExtraWhitespace ctermbg=red guibg=red
 au ColorScheme * highlight ExtraWhitespace guibg=red
